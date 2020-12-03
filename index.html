@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Afazeres</title>
+  </head>
+  <body>
+    <header>
+      <h1>Afazeres</h1>
+    </header>
+
+    <form action="">
+      <input
+        type="text"
+        class="inpuTD"
+        id="inpuTD"
+        placeholder="Adicione o que deseja fazer"
+        autocomplete="off"
+      />
+      <!-- <input type="checkbox" id="checkTD" /> -->
+      <button class="bTDn" id="bTDn" type="submit">
+        <i class="fas fa-plus-square"></i>
+      </button>
+      <div class="select">
+        <select name="toDo" class="filTD" id="filTD">
+          <option value="todos">Todos</option>
+          <option value="completo">Completos</option>
+          <option value="incompleto">Incompleto</option>
+        </select>
+      </div>
+    </form>
+    <div class="conTainerDo">
+      <ul class="lisTD" id="lisTD"></ul>
+    </div>
+  </body>
+</html>
