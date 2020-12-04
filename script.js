@@ -45,7 +45,10 @@ function concluirExcluir(e) {
 
   if (itemTD.classList[0] === 'deleTD') {
     const td = itemTD.parentElement;
-    td.remove();
+    const removerLi = confirm('Tem certeza que deseja excluir?');
+    if (removerLi) {
+      td.remove();
+    }
   }
 
   if (itemTD.classList[0] === 'checkTD') {
