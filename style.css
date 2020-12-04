@@ -150,3 +150,6 @@ select {
 input::placeholder {
   font-size: 1.5rem;
 }
+.iTDens {
+  margin-bottom: 0.5rem;
+}
