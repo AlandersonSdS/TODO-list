@@ -22,6 +22,7 @@ function addAfa(e) {
     const checkTD = document.createElement('input');
     checkTD.type = 'checkbox';
     checkTD.classList.add('checkTD');
+    checkTD.checked = false;
     divTD.appendChild(checkTD);
 
     const liTD = document.createElement('li');
@@ -47,6 +48,7 @@ function concluirExcluir(e) {
     const td = itemTD.parentElement;
     const removerLi = confirm('Tem certeza que deseja excluir?');
     if (removerLi) {
+      deleteLocal(td);
       td.remove();
     }
   }
@@ -124,7 +126,16 @@ function loadStorage() {
     lisTD.appendChild(divTD);
   });
 }
-
+function deleteLocal(afa) {
+  if (localStorage.getItem('todo') === null) {
+    todo = [];
+  } else {
+    todo = JSON.parse(localStorage.getItem('todo'));
+  }
+  const delAfa = afa.children[0].textContent;
+  todo.splice(todo.indexOf(delAfa), 1);
+  localStorage.setItem('todo', JSON.stringify(todo));
+}
 // function saveCheck(item) {
 //   if (localStorage.getItem('check') === null) {
 //     check = [];
