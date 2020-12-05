@@ -57,7 +57,6 @@ function concluirExcluir(e) {
     const todo = itemTD.parentElement;
 
     todo.classList.toggle('completed');
-    // saveCheck(todo.checked);
   }
 }
 
@@ -136,42 +135,3 @@ function deleteLocal(afa) {
   todo.splice(todo.indexOf(delAfa), 1);
   localStorage.setItem('todo', JSON.stringify(todo));
 }
-// function saveCheck(item) {
-//   if (localStorage.getItem('check') === null) {
-//     check = [];
-//   } else {
-//     check = JSON.parse(localStorage.getItem('check'));
-//   }
-//   check.push(item);
-//   localStorage.setItem('check', JSON.stringify(check));
-// }
-
-// function loadCheck() {
-//   if (localStorage.getItem('check') === null) {
-//     check = [];
-//   } else {
-//     check = JSON.parse(localStorage.getItem('check'));
-//   }
-//   check.forEach(function (check) {
-//     const divTD = document.createElement('div');
-//     divTD.classList.add('iTDens');
-//     divTD.appendPare;
-
-//     const checkTD = document.createElement('input');
-//     checkTD.type = 'checkbox';
-//     checkTD.classList.add('checkTD');
-//     divTD.appendChild(checkTD);
-
-//     const liTD = document.createElement('li');
-//     liTD.textContent = check;
-//     liTD.classList.add('liTD');
-//     divTD.appendChild(liTD);
-
-//     const deleTD = document.createElement('button');
-//     deleTD.innerHTML = '<i class="fas fa-trash"></i>';
-//     deleTD.classList.add('deleTD');
-//     divTD.appendChild(deleTD);
-
-//     lisTD.appendChild(divTD);
-//   });
-// }
