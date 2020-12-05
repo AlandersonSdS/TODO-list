@@ -132,6 +132,6 @@ function deleteLocal(afa) {
     todo = JSON.parse(localStorage.getItem('todo'));
   }
   const delAfa = afa.children[0].textContent;
-  todo.splice(todo.indexOf(delAfa), 1);
+  todo.splice(todo.indexOf(delAfa));
   localStorage.setItem('todo', JSON.stringify(todo));
 }
